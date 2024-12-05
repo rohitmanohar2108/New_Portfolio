@@ -30,7 +30,7 @@ export function SkillOrb({ icon: Icon, name, level, groupColor }: SkillOrbProps)
               {[...Array(3)].map((_, i) => (
                 <div
                   key={i}
-                  className={`w-1.5 h-1.5 rounded-full transition-all duration-500 ${
+                  className={`w-1.5 h-1.5 rounded-full transition-all duration-500  animate-spin-slow ${
                     i * 33 < level ? `bg-gradient-to-r ${groupColor}` : 'bg-gray-700'
                   }`}
                 />
