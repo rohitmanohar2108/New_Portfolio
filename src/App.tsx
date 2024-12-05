@@ -1,0 +1,32 @@
+import React from 'react';
+import { ThemeProvider } from './contexts/ThemeContext';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import About from './components/About';
+import Education from './components/Education';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Footer from './components/Footer';
+import { Skills } from './components/Skills';
+import './styles/theme.css';
+
+function App() {
+  return (
+    <ThemeProvider>
+      <div className="min-h-screen bg-background text-text-body transition-colors duration-200">
+        <Header />
+        <main>
+          <Hero />
+          <About />
+          <Education />
+          <Skills />
+          <Experience />
+          <Projects />
+        </main>
+        <Footer />
+      </div>
+    </ThemeProvider>
+  );
+}
+
+export default App;
