@@ -1,6 +1,6 @@
 import React from 'react';
 import { SkillOrb } from './SkillOrb'
-import { SkillsCanvas } from './SkillsCanvas';
+
 import { 
   Code2, Database, Globe, Server, 
   Cloud, Shield, GitBranch, Terminal,
@@ -46,9 +46,7 @@ export function Skills() {
 
   return (
     <div id="skills" className="relative min-h-screen bg--900 py-24 overflow-hidden">
-      <div className="absolute inset-0">
-        <SkillsCanvas />
-      </div>
+      
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
