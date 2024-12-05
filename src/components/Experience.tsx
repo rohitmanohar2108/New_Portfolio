@@ -1,5 +1,6 @@
 import React from 'react';
 import { Briefcase, Calendar } from 'lucide-react';
+import { SkillsCanvas } from './SkillsCanvas';
 
 const ExperienceItem = ({ role, company, period, description, technologies }: {
   role: string;
@@ -10,6 +11,7 @@ const ExperienceItem = ({ role, company, period, description, technologies }: {
 }) => (
   <div className=" bg-background dark:bg-white/5 dark:border dark:border-white/10 dark:hover:border-white/20 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200">
     <div className="flex items-start gap-4">
+    
       <div className="p-3 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg">
         <Briefcase className="w-6 h-6 text-primary" />
       </div>
@@ -51,6 +53,7 @@ const Experience = () => {
 
   return (
     <section id="experience" className="py-20 bg-background transition-colors duration-200">
+       
       <div className="container mx-auto px-6">
      
         <h2 className="text-3xl md:text-4xl font-bold text-text-heading text-center mb-12">Experience</h2>

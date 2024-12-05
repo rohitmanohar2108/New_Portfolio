@@ -28,9 +28,9 @@ export function SkillsCanvas() {
         this.size = Math.random() * 2 + 1;
         this.speedX = Math.random() * 2 - 1;
         this.speedY = Math.random() * 2 - 1;
-        this.color = `rgba(${Math.random() * 100 + 155}, ${
-          Math.random() * 100 + 155
-        }, ${Math.random() * 100 + 155}, 0.1)`;
+        this.color = `rgba(${Math.random() * 100}, ${
+            Math.random() * 200 + 155
+          }, 255, 0.5)`;
       }
 
       update() {

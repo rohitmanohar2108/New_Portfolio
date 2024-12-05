@@ -1,5 +1,6 @@
 import React from 'react';
 import { Github, ExternalLink } from 'lucide-react';
+import { SkillsCanvas } from './SkillsCanvas';
 
 const ProjectCard = ({ title, description, image, technologies, github, demo }: {
   title: string;
@@ -78,6 +79,9 @@ const Projects = () => {
 
   return (
     <section id="projects" className="py-20 bg-secondary dark:bg-secondary/25 transition-colors duration-200">
+       <div className="absolute inset-0">
+        <SkillsCanvas />
+      </div>
       <div className="container mx-auto px-6">
       
         <h2 className="text-3xl md:text-4xl font-bold text-text-heading text-center mb-12">Featured Projects</h2>
