@@ -28,16 +28,16 @@ const EducationItem = ({ degree, school, year, description }: {
 const Education = () => {
   const education = [
     {
-      degree: "Master of Science in Computer Science",
-      school: "Stanford University",
-      year: "2018 - 2020",
-      description: "Specialized in Human-Computer Interaction and Web Technologies. Led research projects on modern web development practices."
+      degree: "Bachelors of Technology in Computer Science",
+      school: "National Institute of Technology Karnataka",
+      year: "2022 - 2026",
+      description: "• C programming • Data Structures and Algorithms • Operating System • Database management system • Linear Algebra And Matrices • Design of digital systems • Data Communication • Design And Anylisis of Algorithms • Software Engineering"
     },
     {
-      degree: "Bachelor of Science in Software Engineering",
-      school: "MIT",
-      year: "2014 - 2018",
-      description: "Focused on full-stack development and user interface design. Graduated with honors and received the Outstanding Student Award."
+      degree: "Secondary Education",
+      school: "Dharampeth M.P. Deo Memorial Science College, Nagpur",
+      year: "2020 - 2022",
+      description: "• Electronics • Physics • Chemistry • Mathematics"
     }
   ];
 

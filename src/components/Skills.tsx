@@ -45,7 +45,7 @@ export function Skills() {
   ];
 
   return (
-    <div className="relative min-h-screen bg--900 py-24 overflow-hidden">
+    <div id="skills" className="relative min-h-screen bg--900 py-24 overflow-hidden">
       <div className="absolute inset-0">
         <SkillsCanvas />
       </div>

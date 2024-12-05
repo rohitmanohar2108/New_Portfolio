@@ -40,19 +40,13 @@ const ExperienceItem = ({ role, company, period, description, technologies }: {
 const Experience = () => {
   const experiences = [
     {
-      role: "Senior Frontend Developer & Tech Lead",
-      company: "Google",
-      period: "2020 - Present",
-      description: "Leading a team of developers in building and maintaining large-scale web applications. Implementing best practices and mentoring junior developers.",
-      technologies: ["React", "TypeScript", "Next.js", "TailwindCSS"]
+      role: "Executive Media Member",
+      company: "TEDxNITK",
+      period: "2022 - Present",
+      description: "Designed posters and promotional materials for TEDx events",
+      technologies: ["Canva", "Photoshop"]
     },
-    {
-      role: "Frontend Developer",
-      company: "Microsoft",
-      period: "2018 - 2020",
-      description: "Developed and maintained core features for Microsoft's web-based products. Collaborated with UX designers to implement responsive designs.",
-      technologies: ["JavaScript", "Vue.js", "SCSS", "Jest"]
-    }
+    
   ];
 
   return (

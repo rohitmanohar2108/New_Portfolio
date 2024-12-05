@@ -17,7 +17,7 @@ const Header = () => {
           <div className="flex items-center space-x-4">
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              {['Home', 'About', 'Education', 'Experience', 'Projects'].map((item) => (
+              {['Home', 'About', 'Education', 'Skills', 'Experience', 'Projects', 'Contact'].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
@@ -47,7 +47,7 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 space-y-4">
-            {['Home', 'About', 'Education', 'Experience', 'Projects'].map((item) => (
+            {['Home', 'About', 'Education', 'Skills', 'Experience', 'Projects', 'Contact'].map((item) => (
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}

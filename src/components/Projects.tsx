@@ -51,26 +51,26 @@ const ProjectCard = ({ title, description, image, technologies, github, demo }: 
 const Projects = () => {
   const projects = [
     {
-      title: "E-Learning Platform",
-      description: "A modern platform for online education with real-time collaboration features.",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      title: "FilmNinja ✨",
+      description: "Built a responsive movie browsing app with real-time data and smart suggestions, featuring optimized search and secure user authentication.",
+      image: "https://do6gp1uxl3luu.cloudfront.net/projects/netflixProject.png",
       technologies: ["React", "Node.js", "MongoDB", "WebRTC"],
-      github: "#",
+      github: "https://github.com/rohitmanohar2108/FilmNinja",
       demo: "#"
     },
     {
-      title: "Developer Portfolio",
-      description: "A customizable portfolio template for developers with dark mode support.",
+      title: "Operating System Simulator✨",
+      description: "Developed a web app to simulate and visualize FIFO, LRU, and Optimal page replacement algorithms, enhancing understanding of memory management and system performance optimization.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      technologies: ["TypeScript", "Next.js", "TailwindCSS"],
-      github: "#",
+      technologies: ["JQuery ", "Node Js", "HTML", "CSS" ],
+      github: "https://github.com/rohitmanohar2108/OS-LAB-PROJECT",
       demo: "#"
     },
     {
-      title: "Code Editor",
-      description: "Browser-based code editor with syntax highlighting and live preview.",
+      title: "Airlines Reservation System✨",
+      description: "Effective airline management relies on online booking systems to enhance customer experience, streamline operations, and boost profitability. These systems improve reservations, reduce errors, and provide valuable data for tailored services and marketing.",
       image: "https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      technologies: ["React", "Monaco Editor", "WebAssembly"],
+      technologies: ["React", "SQL", "JavaScript"],
       github: "#",
       demo: "#"
     }
