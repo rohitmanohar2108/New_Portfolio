@@ -2,16 +2,13 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import AnimatedBackground from "./AnimatedBackground";
 import ProfileImage from "./ProfileImage";
-import { SkillsCanvas } from "./SkillsCanvas";
+
 
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen pt-24 pb-16 md:pt-32 md:pb-24 bg-background dark:bg-secondary/5 transition-colors duration-200 overflow-hidden">
       <AnimatedBackground />
-      <div className="absolute inset-0">
-        <SkillsCanvas />
-      </div>
-
+     
       <div className="container mx-auto px-6 relative">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 text-center md:text-left">
