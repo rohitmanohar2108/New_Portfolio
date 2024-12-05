@@ -9,12 +9,13 @@ const About = () => {
     >
       <div className="relative container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
+        <div className="section-divider mb-12"></div>
           <h2 className="text-3xl md:text-4xl font-bold text-text-heading mb-6">
             About Me
           </h2>
           <div className="flex justify-center mb-8">
             <img
-              src="https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+              src="https://lh3.googleusercontent.com/ogw/AF2bZyio0AAPXlO9mBC0dENNLvzr1OjIZ21BH_8ArMJm6DrlyQ=s64-c-mo"
               alt="Profile"
               className="w-32 h-32 rounded-full object-cover border-4 border-primary"
             />

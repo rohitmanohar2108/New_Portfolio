@@ -4,6 +4,7 @@ import { Github, Linkedin, Twitter, Youtube, Send, Mail } from 'lucide-react';
 const Footer = () => {
   return (
     <footer id="contact" className="bg-secondary dark:bg-secondary/25 text-text-body py-16 transition-colors duration-200">
+      
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 mb-8">
           {/* Contact Me Section */}

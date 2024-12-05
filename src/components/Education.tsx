@@ -44,6 +44,7 @@ const Education = () => {
   return (
     <section id="education" className="py-20 bg-secondary dark:bg-secondary/25 transition-colors duration-200">
       <div className="container mx-auto px-6">
+     
         <h2 className="text-3xl md:text-4xl font-bold text-text-heading text-center mb-12">Education</h2>
         <div className="max-w-4xl mx-auto space-y-6">
           {education.map((item, index) => (
