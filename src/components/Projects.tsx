@@ -10,7 +10,7 @@ const ProjectCard = ({ title, description, image, technologies, github, demo }: 
   github: string;
   demo: string;
 }) => (
-  <div className="bg-background dark:bg-white/5 dark:border dark:border-white/10 dark:hover:border-white/20 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-200">
+  <div className="bg-background border border-zinc-300 dark:bg-white/5 dark:border dark:border-white/10 dark:hover:border-white/20 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-200">
     <div className="relative group">
       <img src={image} alt={title} className="w-full h-48 object-cover" />
       <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center gap-4">
@@ -78,12 +78,16 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-secondary dark:bg-secondary/25 transition-colors duration-200">
-       <div className="absolute inset-0">
+    <section id="projects" className="relative py-20">
+      {/* Background Layers */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-red-400 dark:bg-secondary/25 w-full h-1/2"></div>
+        <div className="absolute top-1/2 bg-background dark:bg-gray-900 w-full h-1/2"></div>
         <SkillsCanvas />
       </div>
-      <div className="container mx-auto px-6">
-      
+
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-text-heading text-center mb-12">Featured Projects</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 font-extralight">
           {projects.map((project, index) => (
