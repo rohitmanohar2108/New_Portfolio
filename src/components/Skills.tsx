@@ -54,7 +54,7 @@ export function Skills() {
           <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
             Technical Universe
           </h2>
-          <p className="mt-4 text-gray-400">Explore the interconnected world of technologies</p>
+          <p className="mt-4 text-gray-400 font-extralight">Explore the interconnected world of technologies</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

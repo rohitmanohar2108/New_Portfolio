@@ -20,7 +20,7 @@ export function SkillCard({ icon: Icon, name, color }: SkillCardProps) {
         </div>
         
         <div className="flex-1">
-          <h3 className="text-lg font-semibold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all">
+          <h3 className="text-lg  font-semibold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all">
             {name}
           </h3>
         </div>

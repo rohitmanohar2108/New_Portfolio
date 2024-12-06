@@ -25,7 +25,7 @@ export function SkillOrb({ icon: Icon, name, level, groupColor }: SkillOrbProps)
         
         <div className="flex-1">
           <div className="flex items-center justify-between">
-            <h4 className="text-black dark:text-white font-medium">{name}</h4>
+            <h4 className="text-black dark:text-white font-extralight">{name}</h4>
             <div className="flex space-x-1">
               {[...Array(3)].map((_, i) => (
                 <div

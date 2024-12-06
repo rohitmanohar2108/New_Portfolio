@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown  } from "lucide-react";
 import AnimatedBackground from "./AnimatedBackground";
 import ProfileImage from "./ProfileImage";
 
@@ -16,16 +16,16 @@ const Hero = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text-heading leading-tight">
               Hi, I'm Rohit.
               <br />
-              <span className="text-primary">
-              A Computer Science student
+              <span className="text-primary font-thin text-6xl">
+              Computer Science student
               </span>{" "}
               at NITK.
             </h1>
-            <p className="text-xl text-text-body">
+            <p className="text-xl text-text-body font-extralight">
               Passionate about web development, building scalable applications,
               and exploring innovative solutions to real-world challenges.
             </p>
-            <button className="group flex items-center space-x-2 bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-lg font-semibold tracking-wide transition-all duration-200 transform hover:scale-105 mx-auto md:mx-0">
+            <button className="relative group flex z-20 font-extralight items-center space-x-2 bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-lg tracking-wide transition-all duration-200 transform hover:scale-105 mx-auto md:mx-0">
               <span>Resume</span>
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </button>
@@ -36,6 +36,12 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      <button
+          className="absolute bottom left-1/2 -translate-x-1/2 text-blue-600 dark:text-blue-600 hover:text-purple-300 transition-colors cursor-auto touch-highlight z-20 mt-28"
+          aria-label="Scroll to skills"
+        >
+          <ChevronDown className="w-8 h-8 animate-bounce" />
+        </button>
     </section>
   );
 };
