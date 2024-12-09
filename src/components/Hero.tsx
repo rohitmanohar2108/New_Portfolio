@@ -12,7 +12,7 @@ const Hero = () => {
       className="relative min-h-screen pt-24 pb-16 md:pt-32 md:pb-24 bg-background dark:bg-secondary/5 transition-colors duration-200 overflow-hidden"
     >
       <AnimatedBackground />
-      <div className=" -mt-[4%]">
+      <div className=" -mt-[4%] hidden sm:block">
         <ParallaxText baseVelocity={-5}>
           CREATIVE DEVELOPER INNOVATIVE THINKER
         </ParallaxText>
