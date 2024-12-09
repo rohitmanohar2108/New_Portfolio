@@ -46,7 +46,7 @@ const Education = () => {
     <section id="education" className="relative py-20">
       {/* Background split into two colors */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-red-400 dark:bg-secondary/25 w-full h-1/2"></div>
+        <div className="absolute inset-0 bg-secondary  dark:bg-secondary/25 w-full h-1/2"></div>
         <div className="absolute top-1/2 bg-background dark:bg-gray-900 w-full h-1/2"></div>
         <SkillsCanvas />
       </div>

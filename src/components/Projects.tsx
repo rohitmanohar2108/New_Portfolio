@@ -81,7 +81,7 @@ const Projects = () => {
     <section id="projects" className="relative py-20">
       {/* Background Layers */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-red-400 dark:bg-secondary/25 w-full h-1/2"></div>
+        <div className="absolute inset-0 bg-secondary  dark:bg-secondary/25 w-full h-1/2"></div>
         <div className="absolute top-1/2 bg-background dark:bg-gray-900 w-full h-1/2"></div>
         <SkillsCanvas />
       </div>

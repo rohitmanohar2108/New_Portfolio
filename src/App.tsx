@@ -9,6 +9,7 @@ import Projects from './components/Projects';
 import Footer from './components/Footer';
 import { Skills } from './components/Skills';
 import './styles/theme.css';
+import { Certifications } from './components/Certifications';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Skills />
           <Experience />
           <Projects />
+          <Certifications />
         </main>
         <Footer />
       </div>

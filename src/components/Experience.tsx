@@ -11,6 +11,7 @@ const ExperienceItem = ({ role, company, period, description, technologies }: {
 }) => (
   <div className="bg-background dark:bg-white/5 dark:border dark:border-white/10 dark:hover:border-white/20 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200">
     <div className="flex items-start gap-4">
+    
       <div className="p-3 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg">
         <Briefcase className="w-6 h-6 text-primary" />
       </div>
@@ -52,7 +53,7 @@ const Experience = () => {
     <section id="experience" className="relative py-20">
       {/* Background layers */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-red-400 dark:bg-secondary/25 w-full h-1/2"></div>
+        <div className="absolute inset-0 bg-secondary  dark:bg-secondary/25 w-full h-1/2"></div>
         <div className="absolute top-1/2 bg-background dark:bg-gray-900 w-full h-1/2"></div>
         <SkillsCanvas />
       </div>
