@@ -44,13 +44,13 @@ const Hero = () => {
               className="flex flex-wrap justify-center items-center lg:justify-start lg:items-start space-x-4 sm:space-x-6 md:space-x-5 mt-4"
             >
               {[
-                { Icon: Github, href: "#", color: "from-blue-500/20 to-purple-500/20" },
+                { Icon: Github, href: "https://github.com/rohitmanohar2108", color: "from-blue-500/20 to-purple-500/20" },
                 {
                   Icon: Linkedin,
                   href: "https://www.linkedin.com/in/rohit-manohar-80b949207/",
                   color: "from-blue-500/20 to-purple-500/20",
                 },
-                { Icon: Mail, href: "#", color: "from-blue-500/20 to-purple-500/20" },
+                { Icon: Mail, href: "mailto:manoharrohit372@gmail.com", color: "from-blue-500/20 to-purple-500/20" },
                 { Icon: Code2, href: "#", color: "from-blue-500/20 to-purple-500/20" },
               ].map(({ Icon, href, color }, index) => (
                 <motion.a
