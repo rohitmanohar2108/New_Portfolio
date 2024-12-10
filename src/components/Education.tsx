@@ -16,7 +16,7 @@ const EducationItem = ({ degree, school, year, description }: {
       <div className="flex-1">
         <h3 className="text-xl font-bold text-text-heading mb-1">{degree}</h3>
         <p className="text-primary font-medium mb-2">{school}</p>
-        <div className="flex items-center text-sm text-text-body mb-3">
+        <div className="flex items-center text-sm  text-text-body mb-3">
           <Calendar className="w-4 h-4 mr-2" />
           <span>{year}</span>
         </div>

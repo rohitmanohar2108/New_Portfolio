@@ -8,7 +8,7 @@ const About = () => {
       className="py-20 bg-background relative overflow-hidden"
     >
       {/* Half background */}
-      <div className="absolute inset-0 h-1/2 bg-secondary dark:bg-secondary/25"></div>
+      <div className="absolute inset-0 h-1/2 bg-secondary dark:bg-"></div>
 
       {/* Main Content */}
       <div className="relative container mx-auto px-6">

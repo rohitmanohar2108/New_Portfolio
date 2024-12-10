@@ -28,7 +28,7 @@ const ProfileImage = ({ imageUrl }: { imageUrl: string }) => {
       <motion.div
         whileHover={{ scale: 1.2, rotate: 360 }}
         whileTap={{ scale: 0.9 }}
-        className="absolute dark:text-white text-blue-600 text-2xl animate-float -top-3 -right-3 z-50"
+        className="absolute dark:text-white text-black text-2xl animate-float -top-3 -right-3 z-20"
       >
         <Cpu />
       </motion.div>
