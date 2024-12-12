@@ -11,7 +11,7 @@ interface SkillOrbProps {
 export function SkillOrb({ icon: Icon, name, level, groupColor }: SkillOrbProps) {
   return (
     <div className="group/orb relative">
-      <div className="absolute -inset-2 bg-gradient-to-r rounded-full opacity-75 blur-lg transition-all duration-500 group-hover/orb:opacity-100"
+      <div className="absolute -inset-2 bg-gradient-to-r  rounded-full opacity-75 blur-lg transition-all duration-500 group-hover/orb:opacity-100"
            style={{ backgroundImage: `linear-gradient(to right, var(--tw-gradient-stops))` }} />
       
       <div className="relative flex items-center space-x-4">
@@ -25,7 +25,7 @@ export function SkillOrb({ icon: Icon, name, level, groupColor }: SkillOrbProps)
         
         <div className="flex-1">
           <div className="flex items-center justify-between">
-            <h4 className="text-black dark:text-white font-extralight">{name}</h4>
+            <h4 className="text-black dark:text-white  font-extralight">{name}</h4>
             <div className="flex space-x-1">
               {[...Array(3)].map((_, i) => (
                 <div

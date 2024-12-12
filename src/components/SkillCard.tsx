@@ -11,7 +11,7 @@ export function SkillCard({ icon: Icon, name, color }: SkillCardProps) {
   return (
     <div className="group relative ">
       <div className={`absolute -inset-0.5 ${color}  rounded-lg blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse-glow`}></div>
-      <div className="relative flex items-center  space-x-4 bg-gray-900 p-6 rounded-lg border border-white/10 hover:border-white/20">
+      <div className="relative flex items-center  space-x-4 bg-gray-700 p-6 rounded-lg border border-white/10 hover:border-white/20">
         <div className="relative">
           <div className={`absolute inset-0 ${color} blur-sm opacity-40 rounded-full`}></div>
           <div className="relative">
@@ -20,7 +20,7 @@ export function SkillCard({ icon: Icon, name, color }: SkillCardProps) {
         </div>
         
         <div className="flex-1">
-          <h3 className="text-lg  font-semibold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all">
+          <h3 className="text-lg font-semibold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all">
             {name}
           </h3>
         </div>

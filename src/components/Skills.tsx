@@ -1,14 +1,31 @@
-import React from 'react';
-import { SkillOrb } from './SkillOrb'
+import React from "react";
+import { SkillOrb } from "./SkillOrb";
+import { FadeInView } from "./FadeInView";
 
-import { 
-  Code2, Database, Globe, Server, 
-  Cloud, Shield, GitBranch, Terminal,
-  Cpu, Brain, Layout, Settings
-} from 'lucide-react';
-import { FaCloud, FaGithub, FaHtml5, FaNodeJs, FaReact } from 'react-icons/fa';
-import { SiCplusplus, SiJavascript, SiMysql, SiRedux, SiSqlite, SiTypescript, } from 'react-icons/si';
-import { FaC } from 'react-icons/fa6';
+import {
+  Code2,
+  Database,
+  Globe,
+  Server,
+  Cloud,
+  Shield,
+  GitBranch,
+  Terminal,
+  Cpu,
+  Brain,
+  Layout,
+  Settings,
+} from "lucide-react";
+import { FaCloud, FaGithub, FaHtml5, FaNodeJs, FaReact } from "react-icons/fa";
+import {
+  SiCplusplus,
+  SiJavascript,
+  SiMysql,
+  SiRedux,
+  SiSqlite,
+  SiTypescript,
+} from "react-icons/si";
+import { FaC } from "react-icons/fa6";
 
 export function Skills() {
   const skillGroups = [
@@ -22,7 +39,7 @@ export function Skills() {
         { icon: FaHtml5, name: "HTML/CSS", level: 85 },
         { icon: SiJavascript, name: "JavaScript", level: 88 },
         { icon: SiTypescript, name: "TypeScript", level: 88 },
-      ]
+      ],
     },
     {
       name: "Backend",
@@ -31,7 +48,7 @@ export function Skills() {
         { icon: FaNodeJs, name: "Node.js", level: 92 },
         { icon: SiMysql, name: "SQL/NoSQL", level: 87 },
         { icon: FaCloud, name: "Cloud", level: 85 },
-      ]
+      ],
     },
     {
       name: "Tools",
@@ -40,40 +57,57 @@ export function Skills() {
         { icon: FaGithub, name: "Github", level: 89 },
         { icon: SiRedux, name: "Redux Toolkit", level: 86 },
         { icon: Brain, name: "AI/ML", level: 84 },
-      ]
-    }
+      ],
+    },
   ];
 
   return (
-    <div id="skills" className="relative min-h-screen bg--900 py-24 overflow-hidden">
-      
-
+    <div
+      id="skills"
+      className="relative min-h-screen bg--900 py-24 overflow-hidden"
+    >
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-       
           <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
             Technical Universe
           </h2>
-          <p className="mt-4 text-gray-400 font-extralight">Explore the interconnected world of technologies</p>
+          <p className="mt-4 text-gray-400">
+            Explore the interconnected world of technologies
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {skillGroups.map((group, index) => (
-            <div key={index} className="relative group perspective-1000">
-              <div className="absolute -inset-1 bg-gradient-to-r opacity-75 blur-lg transition-all duration-500 group-hover:opacity-100"
-                   style={{ backgroundImage: `linear-gradient(to right, var(--tw-gradient-stops))` }}>
-              </div>
-              <div className="relative shadow-lg  border border-gray-200 hover:border-gray-100 dark:bg-white/5 dark:border dark:border-white/10 dark:hover:border-white/20  p-6 rounded-xl transform-gpu transition-all duration-500 group-hover:rotate-y-12">
-                <h3 className={`text-2xl font-bold mb-6 bg-gradient-to-r ${group.color} bg-clip-text text-transparent`}>
-                  {group.name}
-                </h3>
-                <div className="space-y-8">
-                  {group.skills.map((skill, skillIndex) => (
-                    <SkillOrb key={skillIndex} {...skill} groupColor={group.color} />
-                  ))}
+            <FadeInView
+              key={index}
+              delay={index * 0.2}
+              direction={index % 2 === 0 ? "left" : "right"}
+            >
+              <div key={index} className="relative group perspective-1000">
+                <div
+                  className="absolute -inset-1 bg-gradient-to-r opacity-75 blur-lg transition-all duration-500 group-hover:opacity-100"
+                  style={{
+                    backgroundImage: `linear-gradient(to right, var(--tw-gradient-stops))`,
+                  }}
+                ></div>
+                <div className="relative shadow-lg  border border-gray-200 hover:border-gray-100 dark:bg-white/10 dark:border dark:border-white/10 dark:hover:border-white/20  p-6 rounded-xl transform-gpu transition-all duration-500 group-hover:rotate-y-12">
+                  <h3
+                    className={`text-2xl font-bold mb-6 bg-gradient-to-r ${group.color} bg-clip-text text-transparent`}
+                  >
+                    {group.name}
+                  </h3>
+                  <div className="space-y-8 ">
+                    {group.skills.map((skill, skillIndex) => (
+                      <SkillOrb
+                        key={skillIndex}
+                        {...skill}
+                        groupColor={group.color}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
+            </FadeInView>
           ))}
         </div>
       </div>

@@ -1,8 +1,18 @@
-import React from 'react';
-import { Github, ExternalLink } from 'lucide-react';
-import { SkillsCanvas } from './SkillsCanvas';
+import React from "react";
+import { Github, ExternalLink } from "lucide-react";
+import { SkillsCanvas } from "./SkillsCanvas";
+import { TextReveal } from "./TextReveal";
+import { motion } from "framer-motion";
+import { FadeInView } from "./FadeInView";
 
-const ProjectCard = ({ title, description, image, technologies, github, demo }: {
+const ProjectCard = ({
+  title,
+  description,
+  image,
+  technologies,
+  github,
+  demo,
+}: {
   title: string;
   description: string;
   image: string;
@@ -10,7 +20,7 @@ const ProjectCard = ({ title, description, image, technologies, github, demo }: 
   github: string;
   demo: string;
 }) => (
-  <div className="bg-background border border-zinc-300 dark:bg-white/5 dark:border dark:border-white/10 dark:hover:border-white/20 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-200">
+  <div className="bg-background border border-zinc-300 dark:bg-gradient-to-br from-gray-800 to-gray-900  dark:border dark:border-white/10 dark:hover:border-white/20 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-200">
     <div className="relative group">
       <img src={image} alt={title} className="w-full h-48 object-cover" />
       <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center gap-4">
@@ -53,28 +63,33 @@ const Projects = () => {
   const projects = [
     {
       title: "FilmNinja ✨",
-      description: "Built a responsive movie browsing app with real-time data and smart suggestions, featuring optimized search and secure user authentication.",
+      description:
+        "Built a responsive movie browsing app with real-time data and smart suggestions, featuring optimized search and secure user authentication.",
       image: "https://do6gp1uxl3luu.cloudfront.net/projects/netflixProject.png",
       technologies: ["React", "Node.js", "MongoDB", "WebRTC"],
       github: "https://github.com/rohitmanohar2108/FilmNinja",
-      demo: "#"
+      demo: "#",
     },
     {
       title: "Operating System Simulator✨",
-      description: "Developed a web app to simulate and visualize FIFO, LRU, and Optimal page replacement algorithms, enhancing understanding of memory management and system performance optimization.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      technologies: ["JQuery ", "Node Js", "HTML", "CSS" ],
+      description:
+        "Developed a web app to simulate and visualize FIFO, LRU, and Optimal page replacement algorithms, enhancing understanding of memory management and system performance optimization.",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      technologies: ["JQuery ", "Node Js", "HTML", "CSS"],
       github: "https://github.com/rohitmanohar2108/OS-LAB-PROJECT",
-      demo: "#"
+      demo: "#",
     },
     {
       title: "Airlines Reservation System✨",
-      description: "Effective airline management relies on online booking systems to enhance customer experience, streamline operations, and boost profitability. These systems improve reservations, reduce errors, and provide valuable data for tailored services and marketing.",
-      image: "https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      description:
+        "Effective airline management relies on online booking systems to enhance customer experience, streamline operations, and boost profitability. These systems improve reservations, reduce errors, and provide valuable data for tailored services and marketing.",
+      image:
+        "https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       technologies: ["React", "SQL", "JavaScript"],
       github: "#",
-      demo: "#"
-    }
+      demo: "#",
+    },
   ];
 
   return (
@@ -88,13 +103,25 @@ const Projects = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-text-heading text-center mb-12">Featured Projects</h2>
+       
+        <TextReveal
+            text="Featured Projects"
+            className="text-3xl md:text-4xl font-bold text-text-heading text-center mb-12"
+          />
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 font-extralight">
+        
           {projects.map((project, index) => (
+            <FadeInView
+            key={index}
+            delay={index * 0.2}
+            direction={index % 2 === 0 ? "left" : "right"}
+          >
             <ProjectCard key={index} {...project} />
+            </FadeInView>
           ))}
         </div>
-      </div>
+       
+      </div> 
     </section>
   );
 };

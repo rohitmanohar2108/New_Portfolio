@@ -1,17 +1,24 @@
-import React from 'react';
-import { Briefcase, Calendar } from 'lucide-react';
-import { SkillsCanvas } from './SkillsCanvas';
+import React from "react";
+import { Briefcase, Calendar } from "lucide-react";
+import { SkillsCanvas } from "./SkillsCanvas";
+import { FadeInView } from "./FadeInView";
+import { TextReveal } from "./TextReveal";
 
-const ExperienceItem = ({ role, company, period, description, technologies }: {
+const ExperienceItem = ({
+  role,
+  company,
+  period,
+  description,
+  technologies,
+}: {
   role: string;
   company: string;
   period: string;
   description: string;
   technologies: string[];
 }) => (
-  <div className="bg-background dark:bg-white/5 dark:border dark:border-white/10 dark:hover:border-white/20 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200">
+  <div className="bg-background dark:bg-gradient-to-br from-gray-800 to-gray-900 dark:border dark:border-white/10 dark:hover:border-white/20 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200">
     <div className="flex items-start gap-4">
-    
       <div className="p-3 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg">
         <Briefcase className="w-6 h-6 text-primary" />
       </div>
@@ -45,7 +52,7 @@ const Experience = () => {
       company: "TEDxNITK",
       period: "2022 - Present",
       description: "Designed posters and promotional materials for TEDx events",
-      technologies: ["Canva", "Photoshop"]
+      technologies: ["Canva", "Photoshop"],
     },
   ];
 
@@ -60,12 +67,19 @@ const Experience = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-text-heading text-center mb-12">Experience</h2>
-        <div className="max-w-4xl mx-auto space-y-6 font-extralight">
-          {experiences.map((experience, index) => (
-            <ExperienceItem key={index} {...experience} />
-          ))}
-        </div>
+        
+        <TextReveal
+            text="Experience"
+            className="text-3xl md:text-4xl font-bold text-text-heading text-center mb-12"
+          />
+       
+        <FadeInView>
+          <div className="max-w-4xl mx-auto space-y-6 font-extralight">
+            {experiences.map((experience, index) => (
+              <ExperienceItem key={index} {...experience} />
+            ))}
+          </div>
+        </FadeInView>
       </div>
     </section>
   );

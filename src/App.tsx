@@ -10,12 +10,17 @@ import Footer from './components/Footer';
 import { Skills } from './components/Skills';
 import './styles/theme.css';
 import { Certifications } from './components/Certifications';
+import { ScrollProgress } from './components/ScrollProgress';
+import { useSmoothScroll } from './components/useSmoothScroll';
 
 function App() {
+  useSmoothScroll()
   return (
     <ThemeProvider>
+      
       <div className="min-h-screen bg-background text-text-body transition-colors duration-200">
         <Header />
+        <ScrollProgress />
         <main>
           <Hero />
           <About />
