@@ -13,6 +13,8 @@ import { Certifications } from './components/Certifications';
 import { ScrollProgress } from './components/ScrollProgress';
 import { useSmoothScroll } from './components/useSmoothScroll';
 
+
+
 function App() {
   useSmoothScroll()
   return (
@@ -28,6 +30,7 @@ function App() {
           <Skills />
           <Experience />
           <Projects />
+         
           <Certifications />
         </main>
         <Footer />

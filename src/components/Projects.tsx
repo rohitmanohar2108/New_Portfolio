@@ -2,8 +2,10 @@ import React from "react";
 import { Github, ExternalLink } from "lucide-react";
 import { SkillsCanvas } from "./SkillsCanvas";
 import { TextReveal } from "./TextReveal";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { Section } from "./Section";
 import { FadeInView } from "./FadeInView";
+import { useRef } from "react";
 
 const ProjectCard = ({
   title,
@@ -20,7 +22,7 @@ const ProjectCard = ({
   github: string;
   demo: string;
 }) => (
-  <div className="bg-background border border-zinc-300 dark:bg-gradient-to-br from-gray-800 to-gray-900  dark:border dark:border-white/10 dark:hover:border-white/20 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-200">
+  <div className="bg-background border border-zinc-300 dark:bg-white/5  dark:border dark:border-white/10 dark:hover:border-white/20 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-200">
     <div className="relative group">
       <img src={image} alt={title} className="w-full h-48 object-cover" />
       <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center gap-4">
@@ -60,6 +62,16 @@ const ProjectCard = ({
 );
 
 const Projects = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"],
+  });
+
+  const rotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
+  const scale = useTransform(scrollYProgress, [0, 0.5], [0.8, 1]);
+
+
   const projects = [
     {
       title: "FilmNinja ✨",
@@ -93,11 +105,17 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="relative py-20">
+    <Section id="projects" className="relative py-20">
+       <div className="absolute inset-0 bg-secondary  dark:bg-secondary/25 w-full h-1/2"></div>
+      <motion.div
+      ref={containerRef}
+      style={{ scale }}
+      className="max-w-7xl mx-auto px-4"
+      >
       {/* Background Layers */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-secondary  dark:bg-secondary/25 w-full h-1/2"></div>
-        <div className="absolute top-1/2 bg-background dark:bg-gray-900 w-full h-1/2"></div>
+       
+        <div className="absolute top-1/2 bg-background dark:bg-secondary/5 w-full h-1/2"></div>
         <SkillsCanvas />
       </div>
 
@@ -121,8 +139,9 @@ const Projects = () => {
           ))}
         </div>
        
-      </div> 
-    </section>
+      </div>
+      </motion.div> 
+    </Section>
   );
 };
 
