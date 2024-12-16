@@ -31,7 +31,7 @@ const EducationItem = ({
           <Calendar className="w-4 h-4 mr-2" />
           <span>{year}</span>
         </div>
-        <p className="text-text-body">{description}</p>
+        <p className="text-text-body italic">{description}</p>
       </div>
     </div>
   </div>

@@ -113,11 +113,11 @@ const Projects = () => {
       className="max-w-7xl mx-auto px-4"
       >
       {/* Background Layers */}
-      <div className="absolute inset-0">
+       <div className="absolute inset-0">
        
-        <div className="absolute top-1/2 bg-background dark:bg-secondary/5 w-full h-1/2"></div>
+        <div className="absolute top-1/2 bg-background dark:bg-secondary-5 w-full h-1/2"></div>
         <SkillsCanvas />
-      </div>
+      </div> 
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6">

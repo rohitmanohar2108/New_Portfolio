@@ -20,7 +20,7 @@ const About = () => {
       id="about"
       className="py-20 bg-background  relative overflow-hidden"
     >
-      <div className="absolute inset-0 h-1/2 bg-secondary dark:bg-secondary/5 max-w-full"></div>
+      <div className="absolute inset-0 h-1/2 bg-secondary dark:bg-secondary-5  max-w-full"></div>
       <motion.div
         ref={containerRef}
         style={{ scale }}
@@ -107,12 +107,12 @@ const About = () => {
               >
                 <motion.div
                 
-                 className="p-6 rounded-xl bg-secondary dark:bg-white/5 dark:border dark:border-white/10 dark:hover:border-white/20 hover:shadow-lg transition-all duration-200">
+                 className="p-6 rounded-xl bg-secondary dark:bg-white/5 dark:border dark:border-white/10 dark:hover:border-white/20 hover:shadow-lg transition-all duration-200 backdrop-blur-lg">
                   <feature.icon className="w-12 h-12 mb-4 text-primary" />
                   <h3 className="text-xl font-bold text-text-heading mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-text-body">{feature.description}</p>
+                  <p className="text-text-body italic ">{feature.description}</p>
                 </motion.div>
               </FadeInView>
             ))}

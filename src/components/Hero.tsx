@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen pt-24 pb-16 md:pt-32 md:pb-24 bg-background dark:bg-secondary/5 transition-colors duration-200 overflow-hidden"
+      className="relative min-h-screen pt-24 pb-16 md:pt-32 md:pb-24 bg-background dark:bg-secondary-5 transition-colors duration-200 overflow-hidden"
     >
       <AnimatedBackground />
       <div className=" -mt-[4%] hidden sm:block">
@@ -21,6 +21,7 @@ const Hero = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 text-center md:text-left">
             <div className="section-divider mb-12"></div>
+            <div className="animate-border-box bg-white/5 p-6 rounded-xl backdrop-blur-lg border border-gray-700 dark:hover:border-white/20" >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text-heading leading-tight">
               Hi, I'm Rohit.
               <br />
@@ -29,7 +30,8 @@ const Hero = () => {
               </span>{" "}
               at NITK.
             </h1>
-            <p className="text-xl text-text-body font-extralight">
+            </div>
+            <p className="text-xl text-text-body font-extralight italic">
               Passionate about web development, building scalable applications,
               and exploring innovative solutions to real-world challenges.
             </p>
