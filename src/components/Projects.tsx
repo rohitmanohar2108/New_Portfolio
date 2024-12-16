@@ -46,7 +46,7 @@ const ProjectCard = ({
     </div>
     <div className="p-6">
       <h3 className="text-xl font-bold text-text-heading mb-2">{title}</h3>
-      <p className="text-text-body mb-4">{description}</p>
+      <p className="text-text-body mb-4 italic">{description}</p>
       <div className="flex flex-wrap gap-2">
         {technologies.map((tech, index) => (
           <span

@@ -32,7 +32,7 @@ const ExperienceItem = ({
           <Calendar className="w-4 h-4 mr-2" />
           <span>{period}</span>
         </div>
-        <p className="text-text-body mb-4">{description}</p>
+        <p className="text-text-body mb-4 italic">{description}</p>
         <div className="flex flex-wrap gap-2">
           {technologies.map((tech, index) => (
             <span
