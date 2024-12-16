@@ -67,7 +67,7 @@ const Hero = () => {
           </div>
 
           <div className="flex justify-center">
-            <ProfileImage imageUrl="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" />
+            <ProfileImage imageUrl="https://media.licdn.com/dms/image/v2/D5635AQHdDi6OfTqrwg/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1725916584983?e=1734973200&v=beta&t=FCHSyIBjvLOp43gwUMzERvjJp05xjdfy2-7cMAbaIIA" />
           </div>
         </div>
       </div>

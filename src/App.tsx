@@ -9,9 +9,10 @@ import Projects from './components/Projects';
 import Footer from './components/Footer';
 import { Skills } from './components/Skills';
 import './styles/theme.css';
-import { Certifications } from './components/Certifications';
+
 import { ScrollProgress } from './components/ScrollProgress';
 import { useSmoothScroll } from './components/useSmoothScroll';
+import { Testimonials } from './components/Testimonials';
 
 
 
@@ -30,8 +31,7 @@ function App() {
           <Skills />
           <Experience />
           <Projects />
-         
-          <Certifications />
+<Testimonials/>
         </main>
         <Footer />
       </div>
