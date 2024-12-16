@@ -21,16 +21,17 @@ const Hero = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 text-center md:text-left">
             <div className="section-divider mb-12"></div>
-            <div className="animate-border-box bg-white/5 p-6 rounded-xl backdrop-blur-lg border border-gray-700 dark:hover:border-white/20" >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text-heading leading-tight">
-              Hi, I'm Rohit.
-              <br />
-              <span className="text-primary font-thin text-6xl">
-                Computer Science student
-              </span>{" "}
-              at NITK.
-            </h1>
+            <div className="relative bg-white/5 p-6 rounded-xl backdrop-blur-lg border border-gray-700 dark:hover:border-white/20">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text-heading leading-tight">
+                Hi, I'm Rohit.
+                <br />
+                <span className="text-primary font-thin text-6xl">
+                  Computer Science student
+                </span>{" "}
+                at NITK.
+              </h1>
             </div>
+
             <p className="text-xl text-text-body font-extralight italic">
               Passionate about web development, building scalable applications,
               and exploring innovative solutions to real-world challenges.
@@ -46,14 +47,26 @@ const Hero = () => {
               className="flex flex-wrap justify-center items-center lg:justify-start lg:items-start space-x-4 sm:space-x-6 md:space-x-5 mt-4"
             >
               {[
-                { Icon: Github, href: "https://github.com/rohitmanohar2108", color: "from-blue-500/20 to-purple-500/20" },
+                {
+                  Icon: Github,
+                  href: "https://github.com/rohitmanohar2108",
+                  color: "from-blue-500/20 to-purple-500/20",
+                },
                 {
                   Icon: Linkedin,
                   href: "https://www.linkedin.com/in/rohit-manohar-80b949207/",
                   color: "from-blue-500/20 to-purple-500/20",
                 },
-                { Icon: Mail, href: "mailto:manoharrohit372@gmail.com", color: "from-blue-500/20 to-purple-500/20" },
-                { Icon: Code2, href: "#", color: "from-blue-500/20 to-purple-500/20" },
+                {
+                  Icon: Mail,
+                  href: "mailto:manoharrohit372@gmail.com",
+                  color: "from-blue-500/20 to-purple-500/20",
+                },
+                {
+                  Icon: Code2,
+                  href: "#",
+                  color: "from-blue-500/20 to-purple-500/20",
+                },
               ].map(({ Icon, href, color }, index) => (
                 <motion.a
                   key={index}
@@ -74,7 +87,6 @@ const Hero = () => {
         </div>
       </div>
       <div className="absolute bottom-0 left-0 right-0 hidden sm:block">
-        
         <ParallaxText baseVelocity={5}>
           PROBLEM SOLVER TECH ENTHUSIAST
         </ParallaxText>

@@ -20,6 +20,16 @@ export default {
         blob: 'blob 7s infinite',
         float: 'float 3s ease-in-out infinite',
         'spin-slow': 'spin-slow 8s linear infinite',
+        'rotate-border': 'rotate-border 2s linear infinite',
+      },
+      keyframes: {
+        'rotate-border': {
+          '0%': { borderColor: '#ff6347' }, // Red
+          '25%': { borderColor: '#00ff00' }, // Green
+          '50%': { borderColor: '#0000ff' }, // Blue
+          '75%': { borderColor: '#ffff00' }, // Yellow
+          '100%': { borderColor: '#ff0000' }, // Back to Red
+        },
       },
     },
   },

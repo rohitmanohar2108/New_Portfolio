@@ -12,7 +12,7 @@ import './styles/theme.css';
 
 import { ScrollProgress } from './components/ScrollProgress';
 import { useSmoothScroll } from './components/useSmoothScroll';
-import { Testimonials } from './components/Testimonials';
+
 
 
 
@@ -31,7 +31,7 @@ function App() {
           <Skills />
           <Experience />
           <Projects />
-<Testimonials/>
+
         </main>
         <Footer />
       </div>

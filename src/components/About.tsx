@@ -33,7 +33,6 @@ const About = () => {
           <Quote size={120} />
         </motion.div>
         {/* Half background */}
-        
 
         {/* Main Content */}
         <div className="relative container mx-auto px-6">
@@ -48,9 +47,8 @@ const About = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-text-heading mb-6">
                 About me
               </h2>
-              
             </motion.div>
-            
+
             <div className="flex justify-center mb-8">
               <img
                 src="https://lh3.googleusercontent.com/ogw/AF2bZyio0AAPXlO9mBC0dENNLvzr1OjIZ21BH_8ArMJm6DrlyQ=s64-c-mo"
@@ -100,19 +98,19 @@ const About = () => {
                   "Building a supportive community of developers learning and growing together.",
               },
             ].map((feature, index) => (
-              <FadeInView
-                key={index}
-                delay={index * 0.2}
-                direction={index % 2 === 0 ? "left" : "right"}
-              >
+              <FadeInView key={index} delay={index * 0.2}>
                 <motion.div
-                
-                 className="p-6 rounded-xl bg-secondary dark:bg-white/5 dark:border dark:border-white/10 dark:hover:border-white/20 hover:shadow-lg transition-all duration-200 backdrop-blur-lg">
+                  whileHover={{
+                    scale: 1.05,
+                    boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+                  }}
+                  className="p-6 rounded-xl bg-secondary dark:bg-white/5 dark:border dark:border-white/10 dark:hover:border-white/20 hover:shadow-lg transition-all duration-200 backdrop-blur-lg"
+                >
                   <feature.icon className="w-12 h-12 mb-4 text-primary" />
                   <h3 className="text-xl font-bold text-text-heading mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-text-body italic ">{feature.description}</p>
+                  <p className="text-text-body italic">{feature.description}</p>
                 </motion.div>
               </FadeInView>
             ))}
